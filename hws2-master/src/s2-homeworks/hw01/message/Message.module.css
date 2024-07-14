@@ -1,31 +1,18 @@
-.message {
+.message {}
 
-}
-
-.imageAndText {
-
-}
+.imageAndText {}
 
 .imageAndText img {
-
+  width: 100px;
+  height: 100px;
 }
 
-.text {
+.text {}
 
-}
+.text:after {}
 
-.text:after {
+.name {}
 
-}
+.messageText {}
 
-.name {
-
-}
-
-.messageText {
-
-}
-
-.time {
-
-}
+.time {}

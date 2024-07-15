@@ -8,14 +8,21 @@
   top: 131px;
 }
 
-.hw {}
+.hw {
+  width: 1397px;
+  top: 167.5px;
+  border-top: 3px solid rgb(217, 217, 217);
+  border-bottom: 3px solid rgb(217, 217, 217);
+  border-left: none; /* Убираем левую границу */
+  border-right: none; /* Убираем правую границу */
+}
 
 .hwTitle {
   color: rgb(0, 0, 0);
-  font-family: Montserrat;
+ /* font-family: Montserrat, serif;*/
   font-size: 22px;
   font-weight: 600;
   line-height: 27px;
-  letter-spacing: 0%;
   text-align: left;
+  margin-bottom: 9.5px;
 }

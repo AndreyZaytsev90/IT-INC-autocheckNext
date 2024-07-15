@@ -1,18 +1,53 @@
 .sendForm {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .textarea {
+    width: 1236px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px 0px rgba(29, 33, 38, 0.1), 0px 5px 20px 0px rgba(29, 33, 38, 0.03);
+    background: rgb(245, 247, 251);
+    border: 1px solid rgba(29, 33, 38, 0.1); /* Добавляем границу для лучшего визуального эффекта */
+    padding: 10px 15px; /* Добавляем отступы для удобства ввода текста */
+    font-size: 16px; /* Устанавливаем размер шрифта */
+    color: rgb(29, 33, 38); /* Устанавливаем цвет текста */
+    outline: none; /* Убираем стандартное выделение при фокусе */
+    transition: border-color 0.3s ease; /* Добавляем плавный переход для изменения цвета границы */
+    resize: none;
+    overflow: hidden;
+    margin-top: 44px;
+    margin-bottom: 34.5px;
+}
 
+.textarea:focus {
+    border-color: rgb(0, 102, 204); /* Изменяем цвет границы при фокусе */
 }
 
 .button {
-
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background: rgb(0, 102, 204);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    border: none; /* Убираем границу, если она не нужна */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Добавляем плавные переходы */
+    margin-top: 44px;
+    margin-bottom: 34.5px;
 }
 
 .button:hover {
-
+    background: rgb(0, 80, 160); /* Изменяем цвет фона при наведении */
+    transform: scale(1.01); /* Увеличиваем размер кнопки при наведении */
 }
-.button:active {
 
+.button:active {
+    background: rgb(0, 60, 120); /* Изменяем цвет фона при активации */
+    transform: scale(0.99); /* Уменьшаем размер кнопки при активации */
 }

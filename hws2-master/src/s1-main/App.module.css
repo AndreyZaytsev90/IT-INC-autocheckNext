@@ -1,28 +1,101 @@
 .App {
   --header_height: 60px;
-  /* Hometask № 1 */
-  position: absolute;
-  width: 165px;
+  position: relative;
+  /* Изменено на relative для лучшей адаптивности */
+  width: 100%;
+  /* Установлено на 100% */
   height: 27px;
-  left: 70px;
-  top: 131px;
+  margin: 0 auto;
+  /* Центрирование содержимого */
+  padding: 131px 70px 0px 70px;
+  /* Использование padding вместо top для лучшей адаптивности */
+
 }
 
 .hw {
-  width: 1397px;
-  top: 167.5px;
+  width: 100%;
+  /* Ширина на 100% */
+  max-width: 1397px;
+  /* Максимальная ширина */
+  margin: 0 auto;
+  /* Центрирование содержимого */
+  padding-top: 24.5px;
+  /* Использование padding вместо top */
   border-top: 3px solid rgb(217, 217, 217);
   border-bottom: 3px solid rgb(217, 217, 217);
-  border-left: none; /* Убираем левую границу */
-  border-right: none; /* Убираем правую границу */
+  border-left: none;
+  border-right: none;
 }
 
 .hwTitle {
   color: rgb(0, 0, 0);
- /* font-family: Montserrat, serif;*/
   font-size: 22px;
   font-weight: 600;
   line-height: 27px;
   text-align: left;
   margin-bottom: 9.5px;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 1200px) {
+  .hw {
+    padding: 0 20px;
+    /* Изменение отступов для экранов до 1200px */
+  }
+
+  .hwTitle {
+    font-size: 20px;
+    /* Изменение размера шрифта */
+  }
+}
+
+@media (max-width: 992px) {
+  .App {
+    max-width: 150px;
+    padding-top: 100px;
+  }
+
+  .hw {
+    padding: 0 15px;
+    /* Изменение отступов для экранов до 992px */
+  }
+
+  .hwTitle {
+    font-size: 18px;
+    /* Изменение размера шрифта */
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    max-width: 140px;
+    padding-top: 80px;
+  }
+
+  .hw {
+    padding: 0 10px;
+    /* Изменение отступов для экранов до 768px */
+  }
+
+  .hwTitle {
+    font-size: 16px;
+    /* Изменение размера шрифта */
+  }
+}
+
+@media (max-width: 576px) {
+  .App {
+    max-width: 120px;
+    padding-top: 60px;
+  }
+
+  .hw {
+    padding: 0 5px;
+    /* Изменение отступов для экранов до 576px */
+  }
+
+  .hwTitle {
+    font-size: 14px;
+    /* Изменение размера шрифта */
+  }
 }

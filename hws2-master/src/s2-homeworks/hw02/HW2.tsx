@@ -53,12 +53,14 @@ export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] =
 }
 
 function HW2() {
-  const [affairs, setAffairs] = useState<AffairType[]>(defaultAffairs)
+  let [affairs, setAffairs] = useState<AffairType[]>(defaultAffairs)
   const [filter, setFilter] = useState<FilterType>('all')
 
   const filteredAffairs = filterAffairs(affairs, filter)
-  const deleteAffairCallback = (_id: any) => { // need to fix any
-    // need to fix
+
+  const deleteAffairCallback = (_id: number) => {
+    affairs = deleteAffair(affairs, _id)
+    setAffairs(affairs)
   }
 
   return (

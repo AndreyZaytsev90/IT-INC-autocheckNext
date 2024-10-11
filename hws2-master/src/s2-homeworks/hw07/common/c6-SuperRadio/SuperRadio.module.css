@@ -1,15 +1,34 @@
-.radio {
-}
 
-.radio::before {
-}
-
-
-.radio:checked::before {
+.options {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в столбик */
+    gap: 10px; /* Пробел между элементами */
 }
 
 .label {
+    display: flex;
+    align-items: center; /* Выравниваем по центру по вертикали */
 }
 
-.options {
+.radio {
+    margin-right: 10px; /* Пробел между чекбоксом и текстом */
+    margin-left: 30px;
 }
+
+.radio::before {
+    content: ''; /* Можно добавить стили для кастомного чекбокса */
+    display: inline-block;
+    width: 20px; /* Ширина кастомного чекбокса */
+    height: 20px; /* Высота кастомного чекбокса */
+    border: 1px solid #ccc; /* Граница кастомного чекбокса */
+    border-radius: 50%; /* Круглая форма */
+    background-color: white; /* Цвет фона кастомного чекбокса */
+    transition: background-color 0.2s; /* Плавный переход для фона */
+}
+
+.radio:checked::before {
+    background-color: black; /* Цвет фона при выборе - черный */
+    border: 1px solid black; /* Цвет границы при выборе - черный */
+}
+

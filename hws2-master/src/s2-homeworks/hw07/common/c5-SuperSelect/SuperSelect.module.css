@@ -1,9 +1,35 @@
+
+
+
 .select {
+    width: 180px;
+    height: 24px;
+    left: 70px;
+    top: 200px;
+    box-sizing: border-box;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 2px;
+    background: rgb(255, 255, 255);
+    font-size: 16px;
 }
 
 .select:focus {
+    border-color: #007bff; /* Цвет границы при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
 }
 
+.option {
+    padding: 10px; /* Отступы для опций */
+}
 
 .option:hover {
+    background-color: #f0f0f0; /* Цвет фона при наведении */
+}
+
+.option:active {
+    background-color: #e0e0e0; /* Цвет фона при нажатии */
+}
+
+.option:disabled {
+    color: #aaa; /* Цвет для отключенных опций */
 }

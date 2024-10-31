@@ -29,14 +29,10 @@ jobs:
 
       # Устанавливаем зависимости и собираем проект в hws2-master
       - name: Install dependencies
-        run: |
-          cd hws2-master
-          yarn install
+        run: yarn install
 
       - name: Build the project
-        run: |
-          cd hws2-master
-          yarn build
+        run: yarn build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

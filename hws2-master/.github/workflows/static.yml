@@ -1,4 +1,4 @@
-
+# Workflow для деплоя React-приложения на GitHub Pages
 name: Deploy React App to GitHub Pages
 
 on:
@@ -16,7 +16,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -26,19 +25,26 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '21.1.0'
+          node-version: '18.x'  # Рекомендуемая версия Node.js
+
+      # Переходим в папку приложения, где находится package.json
+      - name: Navigate to application directory
+        run: cd hws2-master
 
       - name: Install dependencies
-        run: yarn install
+        run: |
+          cd hws2-master
+          yarn install
 
       - name: Build the project
-        run: yarn build
+        run: |
+          cd hws2-master
+          yarn build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './hws2-master/build'
-
+          path: './hws2-master/build'  # Указываем путь к собранной папке build
 
   deploy:
     environment:
@@ -50,4 +56,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

@@ -27,10 +27,7 @@ jobs:
         with:
           node-version: '21.1.0'  # Рекомендуемая версия Node.js
 
-      # Переходим в папку приложения, где находится package.json
-      - name: Navigate to application directory
-        run: cd hws2-master
-
+      # Устанавливаем зависимости и собираем проект в hws2-master
       - name: Install dependencies
         run: |
           cd hws2-master

@@ -1,14 +1,26 @@
 .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 21px; /* Расстояние между кнопками */
+    padding-top: 25px ;
 }
 
 .clock {
+
+
 }
 
 .watch {
+    width: 174px;
+    height: 24px;
 }
 
 .watch strong {
+    font-weight: bold;
 }
 
 .more {
+    padding-top: 8px ;
+    opacity: 0.5;
 }

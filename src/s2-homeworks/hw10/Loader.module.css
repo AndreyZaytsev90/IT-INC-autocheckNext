@@ -1,3 +1,13 @@
 .loader {
-    /*свг и/или анимация*/
+    border: 8px solid #f3f3f3; /* Светлый цвет границы */
+    border-top: 8px solid #6444e7; /* Синий цвет верхней границы */
+    border-radius: 50%; /* Делаем границу круглой */
+    width: 50px; /* Ширина крутилки */
+    height: 50px; /* Высота крутилки */
+    animation: spin 2s linear infinite; /* Анимация вращения */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Начальное положение */
+    100% { transform: rotate(360deg); } /* Конечное положение */
 }
